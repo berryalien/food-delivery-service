@@ -3,7 +3,7 @@
   font-weight: 400;
 }
 
-.title {
+.hero__title, .title {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
@@ -322,4 +322,60 @@ body {
 .user-nav__num__btn:focus .user-nav__num, .user-nav__num__btn:active .user-nav__num {
   background-color: #FF6838;
   color: #FFFFFF;
+}
+
+.hero {
+  padding-bottom: 60px;
+}
+.hero__benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero__info {
+  width: 450px;
+}
+.hero__title {
+  font-size: 66px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.hero__colorful {
+  color: #FF6838;
+}
+.hero__text {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.hero__items {
+  width: 288px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero__btn {
+  padding: 12px 32px;
+  gap: 10px;
+  border-radius: 6px;
+  background-color: #FF6838;
+  color: #FFFFFF;
+}
+.hero__link {
+  font-size: 20px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }

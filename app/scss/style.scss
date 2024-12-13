@@ -81,7 +81,6 @@
     transition: stroke 0.4s, fill 0.4s;
   }
 
-
   &__num {
     position: absolute;
     width: 15px;
@@ -105,5 +104,58 @@
       background-color: $accent;
       color: $white;
     }
+  }
+}
+
+
+.hero {
+  padding-bottom: 60px;
+
+  &__benefits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    width: 450px;
+  }
+
+  &__title {
+    font-size: 66px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    @extend %rubik-500;
+  }
+
+  &__colorful {
+    color: $accent;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &__items {
+    width: 288px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn {
+    padding: 12px 32px;
+    gap: 10px;
+    border-radius: 6px;
+    background-color: $accent;
+    color: $white;
+  }
+
+  &__link {
+    font-size: 20px;
+    text-decoration-line: underline;
   }
 }

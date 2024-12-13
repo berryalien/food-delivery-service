@@ -2,4 +2,108 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
-@import 'libs';
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 60px 0;
+  min-height: 100%;
+  background-color: $von;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 45px;
+  }
+
+  &__link {
+    @extend %rubik-400;
+    color: $text;
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+}
+
+.logo__header {
+  margin-right: auto;
+}
+
+.user-nav {
+  margin-left: 62px;
+
+  &__btn {
+    position: relative;
+    border-radius: 5px;
+    padding: 12px;
+    transition: box-shadow 0.4s, border 0.4s, background-color 0.4s, color 0.4s;
+
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($accent, 0.3);
+      background-color: rgba($breadcrumbs, 0.1);
+    }
+
+    &:hover {
+      background: $breadcrumbs;
+    }
+
+    &:active {
+      background: $btnactive;
+    }
+
+    &__btn:hover .user-nav__svg {
+      fill: $white;
+      stroke: $white;
+    }
+
+    &__btn:focus .user-nav__svg,
+    &__btn:active .user-nav__svg {
+      fill: $text;
+    }
+  }
+
+  &__svg {
+    width: 18px;
+    height: 18px;
+    stroke: $white;
+    stroke-width: 1.5;
+    fill: $white;
+    transition: stroke 0.4s, fill 0.4s;
+  }
+
+
+  &__num {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $accent;
+    top: 3px;
+    left: 22px;
+    font-size: 10px;
+    color: $white;
+    text-align: center;
+    line-height: 15px;
+
+    &_btn:hover .user-nav__num {
+      background-color: $white;
+      color: $accent;
+    }
+
+    &__btn:focus .user-nav__num,
+    &__btn:active .user-nav__num {
+      background-color: $accent;
+      color: $white;
+    }
+  }
+}

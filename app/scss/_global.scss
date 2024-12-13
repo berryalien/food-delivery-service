@@ -1,0 +1,116 @@
+body {
+  color: $text;
+  font-size: 18px;
+  line-height: 1.3;
+  background-color: $von;
+  @extend %rubik-400;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title {
+  @extend %rubik-500;
+  color: $title;
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.btn-primary {
+  padding: 12px 32px;
+  gap: 10px;
+  color: $white;
+  background-color: $accent;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: box-shadow 0.4s, border 0.4s, background-color 0.4s, color 0.4s;
+
+  &:focus {
+    color: $accent;
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    background-color: rgba(255, 122, 80, 0.1);
+  }
+
+  &:hover {
+    color: $accent;
+    background-color: rgba(255, 255, 255, 0.10);
+    box-shadow: rgba(255, 104, 56, 0.7), 0px 5px 12px 0px rgba(255, 104, 56, 0.20);
+    ;
+  }
+
+  &:active {
+    color: $accent;
+    background-color: rgba(255, 122, 80, 0.10);
+    box-shadow: none;
+    border: none;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.animation {
+  font-size: 20px;
+  color: $title;
+  line-height: 1.5;
+  @extend %rubik-400;
+  border-radius: 5px;
+  transition: text-decoration 0.3s, box-shadow 0.3s, text-shadow 0.3s;
+
+  &:focus {
+    color: $title;
+    box-shadow: 0 0 0 2px rgba(255, 122, 80, 0.70);
+  }
+
+  &:hover {
+    color: rgb(255, 104, 56);
+    text-decoration: none;
+  }
+
+  &:active {
+    color: $title;
+    text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.50);
+    text-decoration: none;
+  }
+}
+
+.logo {
+  border-radius: 5px;
+  transition: background-color 0.4s, opacity 0.4s, box-shadow 0.4s;
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.01);
+    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.70);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+

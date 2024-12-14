@@ -1,9 +1,9 @@
-.assortment__text, .menu__link, .animation, body {
+.delivery__link, .delivery__list, .delivery__text, .assortment__text, .menu__link, .animation, body {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
 }
 
-.assortment__price, .hero__title, .title {
+.delivery__care, .assortment__price, .hero__title, .title {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
@@ -397,6 +397,7 @@ body {
 .assortment .mixitup-control-active {
   background-color: #FF6838;
   color: #FFFFFF;
+  fill: #FFFFFF;
 }
 .assortment__category:not(:last-child) {
   margin-right: 20px;
@@ -407,9 +408,6 @@ body {
   margin-right: 10px;
   -webkit-transition: fill 0.4s;
   transition: fill 0.4s;
-}
-.assortment__svg:active {
-  fill: #FFFFFF;
 }
 .assortment__btn-card {
   width: 101px;
@@ -437,31 +435,25 @@ body {
   transition: background-color 0.3s, box-shadow 0.3s, text-shadow 0.3s;
   transition: background-color 0.3s, box-shadow 0.3s, text-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
-.assortment__btn-food:focus {
-  color: #363853;
-  -webkit-box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-          box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-  background: #FFFFFF;
-}
-.assortment__btn-food:focus__svg {
-  fill: #363853;
-}
 .assortment__btn-food:hover {
   color: #FF6838;
   -webkit-box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
           box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
   background-color: rgba(255, 122, 80, 0.1);
-}
-.assortment__btn-food:hover__svg {
   fill: #FF6838;
+}
+.assortment__btn-food:focus {
+  color: #363853;
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+          box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  background: #FFFFFF;
+  fill: #363853;
 }
 .assortment__btn-food:active {
   color: #363853;
   -webkit-box-shadow: inset 0px -5px 12px 0px rgba(255, 104, 56, 0.2);
           box-shadow: inset 0px -5px 12px 0px rgba(255, 104, 56, 0.2);
   background: #FFFFFF;
-}
-.assortment__btn-food:active__svg {
   fill: #363853;
 }
 .assortment__gallery {
@@ -480,7 +472,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.assortment .product-card {
+.assortment-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -525,4 +517,82 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.delivery__benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.delivery__info {
+  width: 470px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.delivery__care {
+  color: #363853;
+  font-size: 36px;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+.delivery__text {
+  color: #31352B;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.delivery__list {
+  color: #363853;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.delivery__item {
+  position: relative;
+  padding-left: 64px;
+}
+.delivery__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.delivery__item::after {
+  content: "";
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 34px;
+}
+.delivery__item--stopwatch::after {
+  background-image: url("../images/icons/icon-stopwatch.svg");
+}
+.delivery__item--delivery::after {
+  background-image: url("../images/icons/icon-delivery.svg");
+}
+.delivery__item--shop::after {
+  background-image: url("../images/icons/icon-shop.svg");
+}
+.delivery__link {
+  width: 165px;
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: 0.54px;
+  color: #FFFFFF;
+  background-color: #FF6838;
 }

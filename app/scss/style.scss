@@ -505,7 +505,7 @@
       background-image: url('../images/icons/icon-quote-close.svg');
       background-repeat: no-repeat;
       background-size: cover;
-      
+
     }
   }
 
@@ -530,5 +530,39 @@
     font-size: 14px;
     margin-top: 15px;
     @extend %rubik-400;
+  }
+}
+
+.recommendations {
+  &__benefits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+
+  &__info {
+    width: 538px;
+  }
+
+  &__care {
+    color: $title;
+    font-size: 36px;
+    @extend %rubik-500;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    @extend %rubik-400;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
   }
 }

@@ -1,4 +1,4 @@
-.article-slider__note, .delivery__link, .delivery__list, .delivery__text, .assortment__text, .menu__link, .animation, body {
+.recommendations__text, .article-slider__note, .delivery__link, .delivery__list, .delivery__text, .assortment__text, .menu__link, .animation, body {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
 }
@@ -9,7 +9,7 @@
   font-style: italic;
 }
 
-.article-slider__author, .delivery__care, .assortment__price, .hero__title, .title {
+.recommendations__care, .article-slider__author, .delivery__care, .assortment__price, .hero__title, .title {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
@@ -925,4 +925,37 @@ body {
   color: #31352B;
   font-size: 14px;
   margin-top: 15px;
+}
+
+.recommendations__benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.recommendations__info {
+  width: 538px;
+}
+.recommendations__care {
+  color: #363853;
+  font-size: 36px;
+}
+.recommendations__text {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+.recommendations__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.recommendations__item:not(:last-child) {
+  margin-right: 20px;
 }

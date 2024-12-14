@@ -159,3 +159,123 @@
     text-decoration-line: underline;
   }
 }
+
+.assortment {
+
+  &__filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    transition: fill 0.4s;
+  }
+
+  .mixitup-control-active {
+    background-color: $accent;
+    color: $white;
+    fill: $white;
+  }
+
+  &__category:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__svg {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+    transition: fill 0.4s;
+  }
+
+  &__btn-card {
+    width: 101px;
+    height: 32px;
+    padding: 7px 16px;
+    font-size: 13px;
+    justify-content: center;
+  }
+
+  &__btn-food {
+    display: flex;
+    align-items: center;
+    padding: 13px 32px;
+    border-radius: 5px;
+    background: $white;
+    box-shadow: 0 0 0 1px $frame;
+    transition: background-color 0.3s, box-shadow 0.3s, text-shadow 0.3s;
+
+    
+    &:hover {
+      color: $accent;
+      box-shadow: 0 0 0 2px rgba($accent, 0.70);
+      background-color: rgba($breadcrumbs, 0.1);
+      fill: $accent;
+    }
+    
+    &:focus {
+      color: $title;
+      box-shadow: 0 0 0 2px rgba($accent, 0.7);
+      background: $white;
+      fill: $title;
+    }
+
+    &:active {
+      color: $title;
+      box-shadow: inset 0px -5px 12px 0px rgba($accent, 0.2);
+      background: $white;
+      fill: $title;
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-bottom: 60px;
+    // grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-between;
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 210px;
+    height: 300px;
+    font-size: 15px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    background-color: $white;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.10);
+  }
+
+  &__burger {
+    width: 140px;
+    height: 140px;
+    background-size: 140px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 15px;
+    @extend %rubik-400;
+  }
+
+  &__price {
+    margin-top: auto;
+    margin-bottom: 10px;
+    @extend %rubik-500;
+    line-height: 1.4;
+  }
+
+  &__bottom-link {
+    display: flex;
+    justify-content: space-around;
+  }
+}

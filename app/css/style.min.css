@@ -1,9 +1,9 @@
-.menu__link, .animation, body {
+.assortment__text, .menu__link, .animation, body {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
 }
 
-.hero__title, .title {
+.assortment__price, .hero__title, .title {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
@@ -378,4 +378,151 @@ body {
   font-size: 20px;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.assortment__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  -webkit-transition: fill 0.4s;
+  transition: fill 0.4s;
+}
+.assortment .mixitup-control-active {
+  background-color: #FF6838;
+  color: #FFFFFF;
+}
+.assortment__category:not(:last-child) {
+  margin-right: 20px;
+}
+.assortment__svg {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  -webkit-transition: fill 0.4s;
+  transition: fill 0.4s;
+}
+.assortment__svg:active {
+  fill: #FFFFFF;
+}
+.assortment__btn-card {
+  width: 101px;
+  height: 32px;
+  padding: 7px 16px;
+  font-size: 13px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.assortment__btn-food {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 13px 32px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0 0 1px #ECECEC;
+          box-shadow: 0 0 0 1px #ECECEC;
+  -webkit-transition: background-color 0.3s, text-shadow 0.3s, -webkit-box-shadow 0.3s;
+  transition: background-color 0.3s, text-shadow 0.3s, -webkit-box-shadow 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, text-shadow 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, text-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+.assortment__btn-food:focus {
+  color: #363853;
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+          box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  background: #FFFFFF;
+}
+.assortment__btn-food:focus__svg {
+  fill: #363853;
+}
+.assortment__btn-food:hover {
+  color: #FF6838;
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+          box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  background-color: rgba(255, 122, 80, 0.1);
+}
+.assortment__btn-food:hover__svg {
+  fill: #FF6838;
+}
+.assortment__btn-food:active {
+  color: #363853;
+  -webkit-box-shadow: inset 0px -5px 12px 0px rgba(255, 104, 56, 0.2);
+          box-shadow: inset 0px -5px 12px 0px rgba(255, 104, 56, 0.2);
+  background: #FFFFFF;
+}
+.assortment__btn-food:active__svg {
+  fill: #363853;
+}
+.assortment__gallery {
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 30px;
+  margin-bottom: 60px;
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (1fr)[2];
+  grid-template-rows: repeat(2, 1fr);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.assortment .product-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 210px;
+  height: 300px;
+  font-size: 15px;
+  padding: 20px 10px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+.assortment__burger {
+  width: 140px;
+  height: 140px;
+  background-size: 140px;
+  margin-bottom: 10px;
+}
+.assortment__text {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.assortment__price {
+  margin-top: auto;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.assortment__bottom-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }

@@ -24,7 +24,8 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.7.1",
     "mixitup": "^3.3.2",
-    "sass": "^1.82.0"
+    "sass": "^1.82.0",
+    "slick-carousel": "^1.8.1"
   },
   "description": ""
 }

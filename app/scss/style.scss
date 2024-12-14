@@ -2,6 +2,8 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+@import 'libs';
+@import 'slick';
 
 .header {
   position: sticky;
@@ -461,5 +463,72 @@
 
   .restaurants__btn:hover .restaurants__svg {
     transform: translate(70%);
+  }
+}
+
+.article-slider {
+  &__card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  &__img-card {
+    position: relative;
+    border-radius: 50%;
+  }
+
+  &__comment {
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 20px;
+      left: 0;
+      background-image: url('../images/icons/icon-quote-open.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 20px;
+      right: 0;
+      top: 55%;
+      background-image: url('../images/icons/icon-quote-close.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+    }
+  }
+
+  &__cite {
+    width: 570px;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    @extend %rubik-italic;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    color: $accent;
+    font-size: 20px;
+    @extend %rubik-500;
+  }
+
+  &__note {
+    color: $text;
+    font-size: 14px;
+    margin-top: 15px;
+    @extend %rubik-400;
   }
 }

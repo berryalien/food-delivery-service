@@ -44,9 +44,10 @@
   margin-left: 62px;
 
   &__btn {
+    margin-left: 10px;
     position: relative;
     border-radius: 5px;
-    padding: 12px;
+    padding: 10px;
     transition: box-shadow 0.4s, border 0.4s, background-color 0.4s, color 0.4s;
 
 
@@ -65,11 +66,12 @@
       background: $btnactive;
       stroke: $title;
     }
+
   }
 
   &__svg {
-    width: 18px;
-    height: 18px;
+    width: 44px;
+    height: 44px;
     fill: transparent;
     stroke: $title;
     transition: stroke 0.4s;
@@ -228,17 +230,14 @@
     }
   }
 
-  &__burgers,
-  &__pizza,
-  &__sandwiches,
-  &__asiancuisine,
-  &__sets {
+  &__burgers {
     display: grid;
     column-gap: 30px;
     row-gap: 30px;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     justify-content: space-between;
+    margin-bottom: 60px;
   }
 
   .product-card {

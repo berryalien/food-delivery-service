@@ -669,9 +669,10 @@ body {
   margin-left: 62px;
 }
 .user-nav__btn {
+  margin-left: 10px;
   position: relative;
   border-radius: 5px;
-  padding: 12px;
+  padding: 10px;
   -webkit-transition: border 0.4s, background-color 0.4s, color 0.4s, -webkit-box-shadow 0.4s;
   transition: border 0.4s, background-color 0.4s, color 0.4s, -webkit-box-shadow 0.4s;
   transition: box-shadow 0.4s, border 0.4s, background-color 0.4s, color 0.4s;
@@ -692,8 +693,8 @@ body {
   stroke: #363853;
 }
 .user-nav__svg {
-  width: 18px;
-  height: 18px;
+  width: 44px;
+  height: 44px;
   fill: transparent;
   stroke: #363853;
   -webkit-transition: stroke 0.4s;
@@ -858,7 +859,7 @@ body {
   background: #FFFFFF;
   fill: #363853;
 }
-.assortment__burgers, .assortment__pizza, .assortment__sandwiches, .assortment__asiancuisine, .assortment__sets {
+.assortment__burgers {
   display: -ms-grid;
   display: grid;
   -webkit-column-gap: 30px;
@@ -872,6 +873,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 60px;
 }
 .assortment .product-card {
   display: -webkit-box;

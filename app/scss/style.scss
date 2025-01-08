@@ -53,34 +53,26 @@
     &:focus {
       box-shadow: 0 0 0 2px rgba($accent, 0.3);
       background-color: rgba($breadcrumbs, 0.1);
+      stroke: $title;
     }
 
     &:hover {
       background: $breadcrumbs;
+      stroke: $white;
     }
 
     &:active {
       background: $btnactive;
-    }
-
-    &__btn:hover .user-nav__svg {
-      fill: $white;
-      stroke: $white;
-    }
-
-    &__btn:focus .user-nav__svg,
-    &__btn:active .user-nav__svg {
-      fill: $text;
+      stroke: $title;
     }
   }
 
   &__svg {
     width: 18px;
     height: 18px;
-    stroke: $white;
-    stroke-width: 1.5;
-    fill: $white;
-    transition: stroke 0.4s, fill 0.4s;
+    fill: transparent;
+    stroke: $title;
+    transition: stroke 0.4s;
   }
 
   &__num {
@@ -198,12 +190,18 @@
     justify-content: center;
   }
 
+  &active {
+    background: $accent;
+    color: $white;
+    fill: $white;
+  }
+
   &__btn-food {
     display: flex;
     align-items: center;
     padding: 13px 32px;
     border-radius: 5px;
-    background: $white;
+    background-color: $white;
     box-shadow: 0 0 0 1px $frame;
     transition: background-color 0.3s, box-shadow 0.3s, text-shadow 0.3s;
 
@@ -211,7 +209,7 @@
     &:hover {
       color: $accent;
       box-shadow: 0 0 0 2px rgba($accent, 0.70);
-      background-color: rgba($breadcrumbs, 0.1);
+      background: rgba($breadcrumbs, 0.1);
       fill: $accent;
     }
 
@@ -230,11 +228,14 @@
     }
   }
 
-  &__gallery {
+  &__burgers,
+  &__pizza,
+  &__sandwiches,
+  &__asiancuisine,
+  &__sets {
     display: grid;
     column-gap: 30px;
     row-gap: 30px;
-    margin-bottom: 60px;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     justify-content: space-between;
@@ -254,7 +255,7 @@
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.10);
   }
 
-  &__burger {
+  &__img {
     width: 140px;
     height: 140px;
     background-size: 140px;
@@ -505,7 +506,6 @@
       background-image: url('../images/icons/icon-quote-close.svg');
       background-repeat: no-repeat;
       background-size: cover;
-
     }
   }
 

@@ -394,7 +394,7 @@ body {
   background-size: 20px;
 }
 .footer__contact--phone::after {
-  background-image: url("../images/icons/icon-calling.sv");
+  background-image: url("../images/icons/icon-calling.svg");
 }
 .footer__contact--email::after {
   background-image: url("../images/icons/icon-message.svg");
@@ -681,28 +681,23 @@ body {
   -webkit-box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.3);
           box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.3);
   background-color: rgba(255, 122, 80, 0.1);
+  stroke: #363853;
 }
 .user-nav__btn:hover {
   background: #FF7A50;
+  stroke: #FFFFFF;
 }
 .user-nav__btn:active {
   background: #FFF2ED;
-}
-.user-nav__btn__btn:hover .user-nav__svg {
-  fill: #FFFFFF;
-  stroke: #FFFFFF;
-}
-.user-nav__btn__btn:focus .user-nav__svg, .user-nav__btn__btn:active .user-nav__svg {
-  fill: #31352B;
+  stroke: #363853;
 }
 .user-nav__svg {
   width: 18px;
   height: 18px;
-  stroke: #FFFFFF;
-  stroke-width: 1.5;
-  fill: #FFFFFF;
-  -webkit-transition: stroke 0.4s, fill 0.4s;
-  transition: stroke 0.4s, fill 0.4s;
+  fill: transparent;
+  stroke: #363853;
+  -webkit-transition: stroke 0.4s;
+  transition: stroke 0.4s;
 }
 .user-nav__num {
   position: absolute;
@@ -820,6 +815,11 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.assortmentactive {
+  background: #FF6838;
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
 .assortment__btn-food {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -829,7 +829,7 @@ body {
           align-items: center;
   padding: 13px 32px;
   border-radius: 5px;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   -webkit-box-shadow: 0 0 0 1px #ECECEC;
           box-shadow: 0 0 0 1px #ECECEC;
   -webkit-transition: background-color 0.3s, text-shadow 0.3s, -webkit-box-shadow 0.3s;
@@ -841,7 +841,7 @@ body {
   color: #FF6838;
   -webkit-box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
           box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-  background-color: rgba(255, 122, 80, 0.1);
+  background: rgba(255, 122, 80, 0.1);
   fill: #FF6838;
 }
 .assortment__btn-food:focus {
@@ -858,14 +858,13 @@ body {
   background: #FFFFFF;
   fill: #363853;
 }
-.assortment__gallery {
+.assortment__burgers, .assortment__pizza, .assortment__sandwiches, .assortment__asiancuisine, .assortment__sets {
   display: -ms-grid;
   display: grid;
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
   row-gap: 30px;
-  margin-bottom: 60px;
   -ms-grid-columns: (1fr)[5];
   grid-template-columns: repeat(5, 1fr);
   -ms-grid-rows: (1fr)[2];
@@ -897,7 +896,7 @@ body {
   -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
-.assortment__burger {
+.assortment__img {
   width: 140px;
   height: 140px;
   background-size: 140px;

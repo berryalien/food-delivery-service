@@ -1,15 +1,44 @@
+html,
 body {
-  color: $text;
-  font-size: 18px;
-  line-height: 1.3;
-  background-color: $von;
+  height: 100%;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: $dark;
+  background-color: $silver-100;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
   @extend %rubik-400;
+
+  @include mq(tablet-2) {
+    font-size: 18px;
+  }
+
+  @include mq(tablet) {
+    position: relative;
+  }
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+main {
+  flex-grow: 1;
+}
+
+a {
+  color: $dark;
+  font-size: 18px;
+  @include mq(tablet) {
+    font-size: 14px;
+  }
 }
 
 .sr-only {
@@ -33,265 +62,67 @@ body {
   line-height: 1.3;
 }
 
-.btn-primary {
-  padding: 12px 32px;
-  gap: 10px;
-  color: $white;
-  background-color: $accent;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.3;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  transition: box-shadow 0.4s, border 0.4s, background-color 0.4s, color 0.4s;
+.animation-link {
+  border-radius: 5px;
+  transition: box-shadow 0.2s, text-shadow 0.2s, color 0.2s, text-decoration 0.2s;
 
   &:focus {
-    color: $accent;
-    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-    background-color: rgba(255, 122, 80, 0.1);
+    box-shadow: 0 0 0 2px rgba($orange-900, 0.7);
+    text-decoration: none;
   }
 
   &:hover {
-    color: $accent;
-    background-color: rgba(255, 255, 255, 0.10);
-    box-shadow: rgba(255, 104, 56, 0.7), 0px 5px 12px 0px rgba(255, 104, 56, 0.20);
-    ;
+    color: $orange-900;
+    text-decoration: none;
   }
 
   &:active {
-    color: $accent;
-    background-color: rgba(255, 122, 80, 0.10);
+    color: $dark;
+    text-shadow: 2px 2px 5px rgba($dark, 0.5);
     box-shadow: none;
-    border: none;
   }
 }
 
-.section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+.icons-sprite {
+  transition: fill 0.2s, stroke 0.2s;
+  fill: none;
+  stroke: $dark;
+  width: 22px;
+  height: 22px;
 }
 
-.animation {
-  font-size: 20px;
-  color: $title;
-  line-height: 1.5;
-  @extend %rubik-400;
+.animation-btn {
+  background-color: $orange-900;
+  color: #fff;
   border-radius: 5px;
-  transition: text-decoration 0.3s, box-shadow 0.3s, text-shadow 0.3s;
+  transition: box-shadow 0.2s, background-color 0.2s, stroke 0.2s, fill 0.2s, color 0.2s;
 
   &:focus {
-    color: $title;
-    box-shadow: 0 0 0 2px rgba(255, 122, 80, 0.70);
+    box-shadow: 0 0 0 2px rgba($orange-900, 0.7);
+    background-color: $btn-bg-opacity;
+    color: $orange-900;
+
+    .icons-sprite {
+      fill: $orange-900;
+    }
   }
 
   &:hover {
-    color: rgb(255, 104, 56);
-    text-decoration: none;
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    background-color: #fff;
+    color: $orange-900;
+
+    .icons-sprite {
+      fill: $orange-900;
+    }
   }
 
   &:active {
-    color: $title;
-    text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.50);
-    text-decoration: none;
-  }
-}
+    background-color: rgba(255, 122, 80, 0.1);
+    box-shadow: none;
 
-.logo {
-  border-radius: 5px;
-  transition: background-color 0.4s, opacity 0.4s, box-shadow 0.4s;
-
-  &:focus {
-    background-color: rgba(255, 255, 255, 0.01);
-    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.70);
-  }
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
-}
-
-
-.footer {
-  font-size: 14px;
-  padding-top: 60px;
-
-  &__info {
-    display: grid;
-    column-gap: 15px;
-    grid-template-columns: auto auto auto;
-    margin-bottom: 70px;
-  }
-
-  &__logo {
-    margin-bottom: 30px;
-  }
-
-  &__subscribe-from {
-    display: grid;
-  }
-
-  &__form-input {
-    max-width: 200px;
-    padding: 13px 15px;
-    border-radius: 5px;
-    border: 1px solid $gray;
-    background-color: $white;
-    margin-bottom: 12px;
-
-    &:focus {
-      box-shadow: 0px 0px 0px 2px $accent;
-    }
-
-    &::placeholder {
-      font-size: 14px;
-      line-height: 1.3;
-      color: $gray;
-      transition: color 0.3s;
-      @extend %rubik-400;
-    }
-
-    &:hover::placeholder {
-      color: $title;
-      transition: color 0.3s;
-    }
-  }
-
-  &__svg {
-    width: 15px;
-    height: 15px;
-    margin-right: 10px;
-    fill: $accent;
-    transition: fill 0.4s;
-  }
-
-  &__form-btn:focus .footer__svg,
-  &__form-btn:hover .footer__svg,
-  &__form-btn:active .footer__svg {
-    fill: $accent;
-  }
-
-  &__form-btn {
-    display: flex;
-    padding: 13px 38px;
-    font-size: 14px;
-  }
-
-  &__list {
-    display: grid;
-    column-gap: 70px;
-    row-gap: 20px;
-    grid-template-columns: auto auto auto;
-  }
-
-  &__link {
-    color: $text;
-    @extend %rubik-400;
-    letter-spacing: 0.18px;
-  }
-
-  &__contact {
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 30px;
-  }
-
-  &__contact::after {
-    content: "";
-    position: absolute;
-    width: 21px;
-    height: 21px;
-    left: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 20px;
-  }
-
-  &__contact--phone::after {
-    background-image: url('../images/icons/icon-calling.svg');
-  }
-
-  &__contact--email::after {
-    background-image: url('../images/icons/icon-message.svg');
-  }
-
-  &__contact--adress::after {
-    background-image: url('../images/icons/icon-location.svg');
-  }
-
-  &__contacts {
-    display: grid;
-    row-gap: 15px;
-    grid-template-columns: auto;
-  }
-
-  &__social-link {
-    position: relative;
-    display: block;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 1px solid transparent;
-    background-color: $frame;
-    transition: box-shadow 0.4s, background-color 0.4s;
-
-    &:focus {
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-      background-color: rgb(255, 242, 237);
-    }
-
-    &:hover {
-      background-color: $accent;
-    }
-
-    &:active {
-      background-color: rgb(255, 242, 237, 1);
-    }
-  }
-
-  &__social {
-    display: flex;
-  }
-
-  &__social-item:not(:last-child) {
-    margin-right: 15px;
-  }
-
-  &__socialnetworks {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    left: 50%;
-    fill: $text;
-    transform: translate(-50%, -50%);
-    transition: fill 0.4s, transform 0.4s;
-
-    &__social-link:focus {
-      fill: $text;
-    }
-
-    &__social-link:hover {
-      fill: $white;
-    }
-
-    &__social-link:active {
-
-      fill: $accent;
-    }
-  }
-
-  &__bottom {
-    border-top: 1px solid rgba($gray, 0.2);
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-    &__copy {
-      font-size: 14px;
-      display: flex;
+    .icons-sprite {
+      fill: $orange-900;
     }
   }
 }

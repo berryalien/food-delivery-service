@@ -1,54 +1,48 @@
-.article-slider {
-  padding: 0 15px 30px;
-  margin: 20px;
+.slick-disabled {
+  border-color: $orange-800;
 
-  &__arrow {
-    padding: 0;
-    border: 3px solid $gray;
-    border-radius: 50%;
-    width: 34px;
-    height: 34px;
-    background-color: transparent;
-    position: absolute;
-    bottom: -7%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__arrowleft {
-    left: 40%;
-  }
-
-  &__arrowright {
-    right: 40%;
+  .icons-sprite {
+    fill: $orange-800;
   }
 }
 
 .slick-dots {
   display: flex;
   justify-content: center;
-  align-items: center;
 
   li {
-    margin: 0 15px;
-  }
+    &:not(:last-child) {
+      margin-right: 15px;
 
-  button {
-    background-color: $gray;
-    border: none;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    padding: 0;
-    font-size: 0;
-  }
+    }
 
-  li.slick-active {
     button {
-      background-color: $accent;
+      position: relative;
+      border-radius: 50%;
+      font-size: 0;
+      background-color: $gray;
+      width: 15px;
+      height: 15px;
+      border: 1px solid transparent;
+
+      &:focus {
+        box-shadow: 0 0 0 2px $orange-900;
+      }
+
+      &:hover {
+        box-shadow: 0 0 0 2px rgba($orange-900, 0.7);
+      }
+
+      &:active {
+        background-color: $orange-500;
+        box-shadow: none;
+      }
+    }
+
+    &.slick-active {
+      button {
+        background-color: $orange-900;
+      }
     }
   }
 }

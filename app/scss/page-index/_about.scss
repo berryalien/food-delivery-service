@@ -1,0 +1,135 @@
+.about {
+  padding: 60px 0;
+
+  @include mq(tablet) {
+    padding: 20px 0;
+  }
+
+  &__title {
+    @include mq(phone) {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+
+    @include mq(tablet-2) {
+      padding: 25px 0;
+      position: relative;
+    }
+  }
+
+  &__bg {
+    max-width: 440px;
+    width: 100%;
+    height: 585px;
+    @extend %img-position;
+    margin-right: 20px;
+
+    @include mq(tablet-2) {
+      position: absolute;
+      display: block;
+      content: "";
+      background-size: contain;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
+    }
+
+    @include mq(phone) {
+      opacity: 0.3;
+    }
+  }
+
+  &__info {
+    max-width: 470px;
+  }
+
+  &__list {
+    margin-bottom: 30px;
+
+    @include mq(phone) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    padding-left: 65px;
+    font-size: 24px;
+    @include line-clamp(2);
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 34px;
+      height: 34px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @include mq(tablet-2) {
+      height: 34px;
+    }
+
+    @include mq(phone) {
+      padding-left: 45px;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .about__item--delivery::before {
+    background-image: url('../images/delivery-icon/stopwatch.svg');
+  }
+
+  .about__item--courier::before {
+    background-image: url('../images/delivery-icon/delivery.svg');
+  }
+
+  .about__item--place::before {
+    background-image: url('../images/delivery-icon/shop.svg');
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__text p {
+    margin-bottom: 30px;
+    @include line-clamp(5);
+
+    @include mq(phone) {
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 12px 32px;
+    line-height: 1.3;
+  }
+
+  &__point {
+    @include mq(phone) {
+      font-size: 18px;
+    }
+  }
+}

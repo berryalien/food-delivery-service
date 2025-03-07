@@ -48,10 +48,91 @@
                 <svg class="icons-sprite">
                   <use xlink:href="images/sprite.svg#icon-cart-btn"></use>
                 </svg>
+                <span class="sr-only">Корзина</span>
                 <span class="user-nav__num">4</span>
               </button>
             </li>
           </ul>
+          <button class="burger" type="button">
+            <span class="burger__line"></span>
+            <span class="sr-only">Открить меню</span>
+          </button>
+        </div>
+        <div class="burger-nav">
+          <div class="burger-nav__inner">
+            <div class="burger-nav__box">
+              <a class="logo burger__logo" href="#">
+                <img src="images/logo/simplefood.svg" width="200" height="39" alt="логотип">
+              </a>
+              <button class="burger" type="button">
+                <span class="burger__line burger__line--active"></span>
+                <span class="sr-only">Открить меню</span>
+              </button>
+            </div>
+            <ul class="nav__list burger-list">
+              <li class="nav__item">
+                <a class="nav__link nav__link--active animation-link" href="index.html">
+                  Главная
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link animation-link" href="catalog-page.html">
+                  Блюда
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link animation-link" href="product-page.html">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+            <address class="address">
+              <ul class="address__list burger-address__list">
+                <li class="address__item  address__item--geo">
+                  <a class="address__link animation-link" href="#">
+                    ул. Т.Г.Шевченко, 1
+                  </a>
+                </li>
+                <li class="address__item address__item--phone">
+                  <a class="address__link animation-link" href="tel:+380985494168">
+                    380985494168
+                  </a>
+                </li>
+                <li class="address__item address__item--email">
+                  <a class="address__link animation-link" href="mailto:support@sfood.com">
+                    support@sfood.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="social-contact">
+                <li class="social-contact__item">
+                  <a class="social-contact__link animation-btn" href="#" target="_blank">
+                    <svg class="icons-sprite">
+                      <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                    </svg>
+                    <span class="sr-only">Мы в фейсбук</span>
+                  </a>
+                </li>
+                <li class="social-contact__item">
+                  <a class="social-contact__link animation-btn" href="#" target="_blank">
+                    <svg class="icons-sprite">
+                      <use xlink:href="images/sprite.svg#icon-twitter"></use>
+                    </svg>
+                    <span class="sr-only">Нам можна написать в твитер</span>
+                  </a>
+                </li>
+                <li class="social-contact__item">
+                  <a class="social-contact__link animation-btn" href="#" target="_blank">
+                    <svg class="icons-sprite">
+                      <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                    </svg>
+                    <span class="sr-only">Обратиться к нам в инстаграм</span>
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+        </div>
       </nav>
     </div>
     </div>
@@ -404,7 +485,7 @@
                     <svg class="icons-sprite">
                       <use xlink:href="images/sprite.svg#icon-arrow-small-right"></use>
                     </svg>
-                    <span class="sr-only">сылка на Blaze Pizza</span>
+                    <span class="sr-only">ссылка на Blaze Pizza</span>
                   </a>
                 </div>
               </div>
@@ -431,7 +512,7 @@
                     <svg class="icons-sprite">
                       <use xlink:href="images/sprite.svg#icon-arrow-small-right"></use>
                     </svg>
-                    <span class="sr-only">сылка на Pizza Runcho</span>
+                    <span class="sr-only">ссылка на Pizza Runcho</span>
                   </a>
                 </div>
               </div>
@@ -458,7 +539,7 @@
                     <svg class="icons-sprite">
                       <use xlink:href="images/sprite.svg#icon-arrow-small-right"></use>
                     </svg>
-                    <span class="sr-only">сылка на Pizza Hut</span>
+                    <span class="sr-only">ссылка на Pizza Hut</span>
                   </a>
                 </div>
               </div>
@@ -485,7 +566,7 @@
                     <svg class="icons-sprite">
                       <use xlink:href="images/sprite.svg#icon-arrow-small-right""></use>
                     </svg>
-                    <span class=" sr-only">сылка на McDonald`s</span>
+                    <span class=" sr-only">ссылка на McDonald`s</span>
                   </a>
                 </div>
               </div>
@@ -511,7 +592,7 @@
                     <svg class="icons-sprite">
                       <use xlink:href="images/sprite.svg#icon-arrow-small-right"></use>
                     </svg>
-                    <span class="sr-only">сылка на KFC</span>
+                    <span class="sr-only">ссылка на KFC</span>
                   </a>
                 </div>
               </div>
@@ -538,7 +619,7 @@
                     <svg class="icons-sprite">
                       <use xlink:href="images/sprite.svg#icon-arrow-small-right"></use>
                     </svg>
-                    <span class="sr-only">сылка на Star Burgers</span>
+                    <span class="sr-only">ссылка на Star Burgers</span>
                   </a>
                 </div>
               </div>
@@ -631,11 +712,11 @@
       <div class="container">
         <div class="application__inner">
           <div class="application__info">
-               <span class="sr-only">
-                 <h1>
-                  Мы создали для вас удобное приложение для доставки еды
-                 </h1>
-               </span>
+            <span class="sr-only">
+              <h1>
+                Мы создали для вас удобное приложение для доставки еды
+              </h1>
+            </span>
             <h2 class="title">Скачайте мобильное приложение</h2>
             <div class="application__text">
               <p>
@@ -688,17 +769,17 @@
             </a>
           </li>
           <li class="footer__item">
-            <a class="footer__link animation-link" href="">
+            <a class="footer__link animation-link" href="#">
               Продукты
             </a>
           </li>
           <li class="footer__item">
-            <a class="footer__link animation-link" href="">
+            <a class="footer__link animation-link" href="#">
               Блюда
             </a>
           </li>
           <li class="footer__item">
-            <a class="footer__link animation-link" href="">
+            <a class="footer__link animation-link" href="#">
               Меню
             </a>
           </li>
@@ -710,17 +791,17 @@
             </a>
           </li>
           <li class="footer__item">
-            <a class="footer__link animation-link" href="">
+            <a class="footer__link animation-link" href="#">
               Новости
             </a>
           </li>
           <li class="footer__item">
-            <a class="footer__link animation-link" href="">
+            <a class="footer__link animation-link" href="#">
               Партнеры
             </a>
           </li>
           <li class="footer__item">
-            <a class="footer__link animation-link" href="">
+            <a class="footer__link animation-link" href="#">
               ЧаВо
             </a>
           </li>
@@ -732,17 +813,17 @@
             </a>
           </li>
           <li class="footer__item">
-            <a class="footer__link animation-link" href="">
+            <a class="footer__link animation-link" href="#">
               Блог
             </a>
           </li>
           <li class="footer__item">
-            <a class="footer__link animation-link" href="">
+            <a class="footer__link animation-link" href="#">
               Что нового?
             </a>
           </li>
           <li class="footer__item">
-            <a class="footer__link animation-link" href="">
+            <a class="footer__link animation-link" href="#">
               Карта сайта
             </a>
           </li>
@@ -798,7 +879,7 @@
       <span class="footer__copyright">© 2025 Simple Food</span>
     </div>
   </footer>
-  
+
   <script src="js/main.min.js"></script>
 </body>
 

@@ -36,9 +36,27 @@ main {
 a {
   color: $dark;
   font-size: 18px;
+
   @include mq(tablet) {
     font-size: 14px;
   }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.3;
+  color: $darkBlue-900;
+  @include line-clamp(2);
+
+  @include mq(tablet-2) {
+    font-size: 30px;
+  }
+}
+
+path,
+ellipse {
+  transition: fill 0.2s, stroke 0.2s;
 }
 
 .sr-only {
@@ -52,14 +70,7 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.title {
-  @extend %rubik-500;
-  color: $title;
-  text-align: center;
-  font-size: 36px;
-  line-height: 1.3;
+  z-index: 1;
 }
 
 .animation-link {
@@ -124,5 +135,25 @@ a {
     .icons-sprite {
       fill: $orange-900;
     }
+  }
+}
+
+.burger-nav {
+  display: none;
+}
+
+.lock {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 1000vh;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }

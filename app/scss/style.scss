@@ -7,3 +7,266 @@
 @import 'global';
 
 @import 'page-index/hero';
+
+.description {
+  padding: 60px 0;
+  border-bottom: 1px solid $border-line;
+
+  &__inner {
+    max-width: 690px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__tabs {
+    display: flex;
+    margin-bottom: 30px;
+
+    @include mq(phone) {
+      overflow-x: auto;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        height: 1px;
+        background-color: $gray;
+      }
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 60px;
+  }
+
+  &__link {
+    font-size: 24px;
+    line-height: 1.5;
+    color: $darkBlue-900;
+
+    @include mq(tablet) {
+      font-size: 22px;
+    }
+  }
+
+  &__content {
+    display: none;
+    color: $breadcrumbs;
+  }
+
+  &__link--active {
+    color: $orange-900;
+  }
+
+  &__content--active {
+    display: block;
+  }
+
+  &__charakter-item {
+    @extend %rubik-500;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__charakter {
+    font-weight: 400;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+    @include mq(phone) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__top-inner {
+    display: flex;
+    align-items: center;
+
+    @include mq(phone) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__opinions-title,
+  &__form-title {
+    font-size: 24px;
+    @extend %rubik-500;
+    margin-bottom: 25px;
+    color: $darkBlue-900;
+  }
+
+  &__opinions-item {
+    padding: 20px 0;
+    color: $breadcrumbs;
+  }
+
+  &__opinions-item:not(:last-child) {
+    border-bottom: 2px solid $border-line;
+  }
+
+  &__opinions-item:last-child {
+    margin-bottom: 40px;
+  }
+
+  &__client-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+  &__client {
+    margin-right: auto;
+  }
+
+  &__client-name {
+    display: block;
+    font-size: 18px;
+    @extend %rubik-500;
+    color: $breadcrumbs;
+  }
+
+  &__client-text {
+
+    @include mq(phone) {
+      font-size: 16px;
+    }
+  }
+
+  &__date {
+    font-size: 16px;
+  }
+
+  &__stars {
+    display: block;
+  }
+
+  &__form-wrapper {
+    color: $breadcrumbs;
+  }
+
+  &__form-rate {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  &__form-label {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__form-sub,
+  &__form-label {
+    font-size: 18px;
+  }
+
+  &__form-inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include mq(tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__form-left {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(tablet) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__form-text {
+    width: 400px;
+    height: 170px;
+
+    @include mq(tablet) {
+      width: 100%;
+    }
+  }
+
+  &__form-name,
+  &__form-email {
+    margin-bottom: 15px;
+    width: 260px;
+    height: 56px;
+  }
+
+  &__checkbox-label {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.1;
+    font-size: 16px;
+    margin-bottom: 25px;
+    cursor: pointer;
+
+    input {
+      width: 20px;
+      height: 20px;
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &__form-button {
+    width: 205px;
+    height: 45px;
+    cursor: pointer;
+  }
+
+  input,
+  textarea {
+    font-size: 16px;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 3px 11px 1px #31352b69;
+    resize: none;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 16px;
+    color: $gray;
+  }
+
+  #save-me {
+    border: 1px solid transparent;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin-right: 30px;
+
+    &:checked+.description__form-span {
+      background-image: url('../images/icons/icon-check-mark.svg');
+      background-repeat: no-repeat;
+      background-size: 14px;
+      background-position: center center;
+      border-color: $darkBlue-900;
+    }
+  }
+
+  &__form-span {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid $gray;
+    border-radius: 3px;
+    transition: border-color .2s, background-img .2s;
+  }
+}

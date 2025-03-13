@@ -6,12 +6,6 @@
     object-fit: cover;
   }
 
-  path {
-    .path-text--color {
-      fill: $orange-900;
-    }
-  }
-
   &:focus {
     box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
   }

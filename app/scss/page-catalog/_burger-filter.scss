@@ -1,0 +1,112 @@
+.burger-filter {
+  position: relative;
+  display: none;
+  width: 30px;
+  height: 20px;
+  padding: 22px 22px 22px 22px;
+
+  @include mq(tablet) {
+    display: block;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 18px 10px 18px;
+    display: none;
+
+    @include mq(tablet) {
+      display: flex;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 2px;
+    background-color: $orange-900;
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: inline-block;
+      content: '';
+      top: 50%;
+      left: 50%;
+      width: 30px;
+      height: 2px;
+      transition: transform 0.3s, width 0.3s, height 0.3s;
+      background-color: inherit;
+    }
+
+
+    &::before {
+      margin-top: -3px;
+      margin-left: -15px;
+      transform: translateY(-7px);
+    }
+
+    &::after {
+      margin-top: 3px;
+      margin-left: -15px;
+      transform: translateY(7px);
+    }
+
+    &--active {
+      height: 0;
+
+      &::before {
+        transform: rotateZ(-45deg);
+        margin-top: -1px;
+      }
+
+      &::after {
+        transform: rotateZ(45deg);
+        margin-top: -1px;
+      }
+    }
+  }
+
+  &__circle-top,
+  &__circle-middle,
+  &__circle-bottom {
+    position: absolute;
+    background-color: $orange-100;
+    border: 2px solid $orange-900;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    transition: transform 0.2s;
+  }
+
+  &__circle-top {
+    top: 7px;
+    right: 9px;
+  }
+
+  &__circle-middle {
+    top: 17px;
+    left: 9px;
+  }
+
+  &__circle-bottom {
+    bottom: 6px;
+    right: 9px;
+  }
+
+  &--active {
+
+    .burger-filter__circle-top,
+    .burger-filter__circle-bottom {
+      transform: translateX(-15px);
+    }
+
+    .burger-filter__circle-middle {
+      transform: translateX(15px);
+    }
+  }
+}

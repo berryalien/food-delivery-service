@@ -1,0 +1,92 @@
+.basket {
+  display: flex;
+  align-items: center;
+
+  @include mq(tablet) {
+    margin-right: 20px;
+  }
+
+  @include mq(phone) {
+    margin-right: 10px;
+  }
+
+  &__icon {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    background-color: $silver-100;
+
+    @include mq(phone) {
+      height: 35px;
+    }
+
+    &:focus {
+
+      .icons-sprite {
+        fill: none;
+      }
+    }
+
+    &:hover {
+      background-color: #FF7A50;
+      box-shadow: none;
+
+      .icons-sprite {
+        fill: none;
+        stroke: #fff;
+      }
+
+      .basket__num {
+        background-color: #fff;
+        color: $orange-900;
+        box-shadow: 0 0 0 1px $orange-900;
+      }
+    }
+
+    &:active {
+      background-color: #FFF2ED;
+
+      .icons-sprite {
+        fill: none;
+        stroke: #000;
+      }
+
+      .basket__num {
+        background-color: #fff;
+        color: $orange-900;
+        box-shadow: 0 0 0 1px $orange-900;
+      }
+    }
+  }
+
+  &__num {
+    position: absolute;
+    padding: 3px 7px;
+    top: 2px;
+    left: 22px;
+    background-color: $orange-900;
+    border-radius: 10px;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    transition: background 0.2s, color 0.2s;
+
+    @include mq(phone) {
+      padding: 3px 4px;
+      width: 14px;
+      height: 14px;
+      top: 3px;
+      left: 27px;
+    }
+  }
+}

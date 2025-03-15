@@ -1,0 +1,40 @@
+.discount {
+  padding: 60px 0 30px;
+
+  @include mq(phone) {
+    padding: 20px 0;
+  }
+
+  .title {
+    margin-bottom: 60px;
+
+    @include mq(tablet-2) {
+      text-align: center;
+    }
+
+    @include mq(tablet) {
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+
+    @include mq(tablet) {
+      justify-content: center;
+      margin-right: -5px;
+    }
+  }
+
+  &__item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    @include mq(phone) {
+      margin-bottom: 15px;
+    }
+  }
+}

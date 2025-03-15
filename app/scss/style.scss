@@ -8,6 +8,58 @@
 
 @import 'page-index/hero';
 
+@import 'parts/nav';
+
+@import 'parts/burger';
+
+@import 'parts/burger-nav';
+
+@import 'parts/burger-list';
+
+@import 'parts/basket';
+
+@import 'page-index/choice';
+
+@import 'parts/product-card';
+
+@import 'page-index/about';
+
+@import 'page-index/restorans';
+
+@import 'parts/card-rest';
+
+@import 'parts/comments';
+
+@import 'parts/application';
+
+@import 'parts/footer';
+
+@import 'parts/subscribe';
+
+@import 'parts/address';
+
+@import 'parts/social-contact';
+
+@import 'parts/slick';
+
+@import 'parts/breadcrumbs';
+
+@import 'page-catalog/catalog';
+
+@import 'page-catalog/burger-filter';
+
+@import 'page-catalog/filter';
+
+@import 'parts/pagination';
+
+@import 'parts/discount';
+
+@import 'parts/form-styler';
+
+@import 'parts/irs-styler';
+
+@import 'page-products/products';
+
 .description {
   padding: 60px 0;
   border-bottom: 1px solid $border-line;

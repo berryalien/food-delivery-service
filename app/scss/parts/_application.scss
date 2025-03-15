@@ -1,0 +1,103 @@
+.application {
+  padding: 60px 0;
+
+  @include mq(tablet) {
+    padding: 20px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq(tablet-2) {
+      position: relative;
+      height: 380px;
+      align-items: center;
+    }
+
+    @include mq(phone) {
+      height: auto;
+    }
+  }
+
+  &__info {
+    max-width: 540px;
+  }
+
+  .title {
+    margin-bottom: 45px;
+
+    @include mq(phone) {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    @include line-clamp(8);
+
+    @include mq(phone) {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__box {
+    max-width: 285px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    height: 40px;
+    @extend %img-position;
+    border: 1px solid $gray;
+    border-radius: 5px;
+
+    &:hover {
+      border-color: $orange-900;
+    }
+
+    &:focus {
+      border-color: $orange-900;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+
+    &--apps {
+      width: 120px;
+    }
+
+    &--ggplay {
+      width: 135px;
+    }
+  }
+
+  &__img {
+    max-width: 570px;
+    width: 100%;
+    height: 380px;
+    @extend %img-position;
+
+    @include mq(tablet-2) {
+      position: absolute;
+      display: block;
+      content: "";
+      background-size: contain;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      width: 100%;
+      height: 80%;
+      opacity: .3;
+    }
+
+    @include mq(phone) {
+      display: none;
+    }
+  }
+}

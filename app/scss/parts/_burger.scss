@@ -1,0 +1,62 @@
+.burger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  padding: 22px 22px 22px 22px;
+
+  @include mq(tablet) {
+    display: block;
+  }
+
+  &__line {
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 2px;
+    background-color: $dark;
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      top: 50%;
+      left: 50%;
+      width: 30px;
+      height: 2px;
+      transition: transform 0.3s, width 0.3s, height 0.3s;
+      background-color: $dark;
+    }
+
+
+    &::before {
+      margin-top: -3px;
+      margin-left: -15px;
+      transform: translateY(-7px);
+    }
+
+    &::after {
+      margin-top: 3px;
+      margin-left: -15px;
+      transform: translateY(7px);
+    }
+
+    &--active {
+      height: 0;
+
+      &::before {
+        transform: rotateZ(-45deg);
+        margin-top: -1px;
+      }
+
+      &::after {
+        transform: rotateZ(45deg);
+        margin-top: -1px;
+      }
+    }
+  }
+}

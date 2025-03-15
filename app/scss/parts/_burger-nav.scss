@@ -1,0 +1,58 @@
+.burger-nav {
+  padding: 0 15px;
+
+  @include mq(tablet) {
+    display: block;
+    position: absolute;
+    max-width: 400px;
+    width: 86%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateX(-300%);
+    transition: transform 0.5s;
+    background-color: #fff;
+
+    &--active {
+      transform: translateX(0);
+    }
+  }
+
+  &__inner {
+    @include mq(tablet) {
+      height: 100vh;
+    }
+  }
+
+  &__box {
+    @include mq(tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 0px 25px 0;
+    }
+  }
+
+  .address {
+    @include mq(tablet) {
+      padding: 15px 0;
+    }
+
+    a {
+      @include mq(tablet) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .burger__logo {
+    @include mq(tablet) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.breadcrumbs {
+  padding: 22px 0;
+  background-color: rgba(255, 122, 80, 0.1);
+
+  &__list {
+    display: flex;
+    line-height: 1.2;
+  }
+
+  &__item {
+    position: relative;
+    color: $breadcrumbs;
+
+    &:not(:last-child) {
+      margin-right: 17px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 10px;
+      top: 9px;
+      right: -11px;
+      background-image: url('../images/icons/icon-chevron.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &:last-child {
+      color: $orange-900;
+      pointer-events: none;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: inherit;
+  }
+}

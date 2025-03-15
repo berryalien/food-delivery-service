@@ -1,0 +1,18 @@
+.burger-list {
+  @include mq(tablet) {
+    display: block;
+    padding: 25px 0 25px;
+    margin-right: 0;
+  }
+
+  .nav__item {
+    @include mq(tablet) {
+      font-size: 18px;
+      line-height: 120%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

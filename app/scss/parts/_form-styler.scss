@@ -1,0 +1,174 @@
+.jq-selectbox__select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 47px;
+  padding: 0 35px 0 10px;
+  border: 1px solid $gray;
+  border-bottom-color: none;
+  border-radius: 3px;
+  background: transparent;
+  box-shadow: none;
+  color: $dark;
+  text-shadow: none;
+  font-size: 14px;
+  line-height: 1.2;
+
+  &:hover {
+    background: $orange-100;
+  }
+
+  &:active {
+    background: $silver-200;
+    box-shadow: none;
+  }
+}
+
+.jq-selectbox.focused .jq-selectbox__select {
+  border-color: $gray;
+}
+
+.jq-selectbox__trigger {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 34px;
+  height: 100%;
+  border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 22px;
+  height: 6px;
+  border: none;
+  background-image: url('../images/sprite.svg#icon-vector-down');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: invert(85%) sepia(1%) saturate(232%) hue-rotate(331deg) brightness(99%) contrast(76%);
+}
+
+.jq-selectbox li.selected {
+  background-color: $orange-100;
+  color: $dark;
+}
+
+.jq-selectbox li:hover {
+  background-color: $orange-100;
+  color: $dark;
+}
+
+.jq-number {
+  position: relative;
+  vertical-align: middle;
+  padding: 0 44px;
+  margin-right: 20px;
+}
+
+.jq-number__spin.minus {
+  top: 0;
+  left: 0;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.jq-number__spin.plus {
+  top: 0;
+  right: 0;
+  border-radius: 0px 3px 3px 0px;
+}
+
+.jq-number__spin {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  background-color: $orange-900;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+
+  &:hover {
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    background-color: #fff;
+    color: $orange-900;
+  }
+
+  &:active {
+    background-color: rgba(255, 122, 80, 0.1);
+    box-shadow: none;
+  }
+}
+
+.jq-number__field input {
+  text-align: center;
+  width: 70px;
+  height: 44px;
+  padding: 9px 8px;
+  background-color: $orange-100;
+  border: none;
+  letter-spacing: 0.03em;
+  color: $darkBlue-900;
+  line-height: 1;
+}
+
+// input product styles
+
+.jq-number__spin:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+}
+
+.jq-number__spin.minus:after {
+  top: 50%;
+  background:
+    linear-gradient(#fff, #fff);
+  background-position: center;
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+}
+
+.jq-number__spin.plus:after {
+  background:
+    linear-gradient(#fff, #fff),
+    linear-gradient(#fff, #fff);
+  background-position: center;
+  background-size: 100% 2px, 2px 100%;
+  background-repeat: no-repeat;
+}
+
+.jq-number__spin.minus:hover:after {
+  background: linear-gradient(#000, #000);
+  background-position: center;
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+}
+
+.jq-number__spin.plus:hover:after {
+  background:
+    linear-gradient(#000, #000),
+    linear-gradient(#000, #000);
+  background-position: center;
+  background-size: 100% 2px, 2px 100%;
+  background-repeat: no-repeat;
+}
+
+.jq-number__spin.minus:active:after {
+  background: linear-gradient(#000, #000);
+  background-position: center;
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+}
+
+.jq-number__spin.plus:active:after {
+  background:
+    linear-gradient(#000, #000),
+    linear-gradient(#000, #000);
+  background-position: center;
+  background-size: 100% 2px, 2px 100%;
+  background-repeat: no-repeat;
+}

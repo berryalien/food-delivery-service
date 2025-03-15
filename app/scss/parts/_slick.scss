@@ -1,0 +1,48 @@
+.slick-disabled {
+  border-color: $orange-800;
+
+  .icons-sprite {
+    fill: $orange-800;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 15px;
+
+    }
+
+    button {
+      position: relative;
+      border-radius: 50%;
+      font-size: 0;
+      background-color: $gray;
+      width: 15px;
+      height: 15px;
+      border: 1px solid transparent;
+
+      &:focus {
+        box-shadow: 0 0 0 2px $orange-900;
+      }
+
+      &:hover {
+        box-shadow: 0 0 0 2px rgba($orange-900, 0.7);
+      }
+
+      &:active {
+        background-color: $orange-500;
+        box-shadow: none;
+      }
+    }
+
+    &.slick-active {
+      button {
+        background-color: $orange-900;
+      }
+    }
+  }
+}

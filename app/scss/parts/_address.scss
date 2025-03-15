@@ -1,0 +1,67 @@
+.address {
+  font-size: 16px;
+  max-width: 200px;
+
+  @include mq(tablet-2) {
+    order: 2;
+    margin-bottom: 30px;
+    margin-right: 70px;
+  }
+
+  @include mq(phone) {
+    margin-right: 0;
+  }
+
+  &__list {
+    margin-bottom: 15px;
+  }
+
+  &__item {
+    position: relative;
+    font-style: normal;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &--geo {
+      &::before {
+        width: 15px;
+        height: 18px;
+        background-image: url('../images/icons/icon-geo.svg');
+      }
+    }
+
+    &--phone {
+      &::before {
+        width: 19px;
+        height: 19px;
+        background-image: url('../images/icons/icon-phone.svg');
+      }
+    }
+
+    &--email {
+      &::before {
+        width: 20px;
+        height: 18px;
+        background-image: url('../images/icons/icon-message.svg');
+      }
+    }
+  }
+
+  &__link {
+    padding-left: 30px;
+    font-size: 16px;
+    line-height: 2;
+  }
+}

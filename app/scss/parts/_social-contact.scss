@@ -1,0 +1,51 @@
+.social-contact {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 13px
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $silver-200;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+
+    .icons-sprite {
+      fill: #000;
+      stroke: none;
+    }
+
+    &:focus {
+
+      .icons-sprite {
+        fill: #000;
+        stroke: none;
+      }
+    }
+
+    &:hover {
+      background-color: #FF7A50;
+      box-shadow: none;
+
+      .icons-sprite {
+        fill: #fff;
+        stroke: none;
+      }
+    }
+
+    &:active {
+      background-color: #FFF2ED;
+
+      .icons-sprite {
+        fill: $orange-900;
+        stroke: none;
+      }
+    }
+  }
+}

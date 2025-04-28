@@ -70,16 +70,16 @@
 
   &__num {
     position: absolute;
-    padding: 3px 7px;
-    top: 2px;
-    left: 22px;
+    padding: 3px 4px;
+    top: 6px;
+    left: 29px;
     background-color: $orange-900;
     border-radius: 10px;
     font-size: 10px;
     color: #fff;
     text-align: center;
     line-height: 1;
-    transition: background 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
 
     @include mq(phone) {
       padding: 3px 4px;

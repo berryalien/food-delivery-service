@@ -108,14 +108,13 @@
       &::before {
         top: 1px;
         left: -50px;
-        background-image: url('../images/icons/icon-quotes.svg');
+        background-image: url('../images/icons/icon-quote-open.svg');
       }
 
       &::after {
         bottom: -2px;
         right: -30px;
-        background-image: url('../images/icons/icon-quotes.svg');
-        transform: rotateY(180deg);
+        background-image: url('../images/icons/icon-quote-close.svg');
       }
     }
   }
@@ -203,7 +202,6 @@
 
     &--next {
       right: calc(50% - 110px);
-      transform: rotateY(180deg);
     }
 
     @include mq(tablet) {

@@ -44,7 +44,7 @@
   width: 22px;
   height: 6px;
   border: none;
-  background-image: url('../images/sprite.svg#icon-vector-down');
+  background-image: url('../images/sprite.svg#icon-chevron-down');
   background-repeat: no-repeat;
   background-size: cover;
   filter: invert(85%) sepia(1%) saturate(232%) hue-rotate(331deg) brightness(99%) contrast(76%);
@@ -70,13 +70,13 @@
 .jq-number__spin.minus {
   top: 0;
   left: 0;
-  border-radius: 3px 0px 0px 3px;
+  border-radius: 3px 0 0 3px;
 }
 
 .jq-number__spin.plus {
   top: 0;
   right: 0;
-  border-radius: 0px 3px 3px 0px;
+  border-radius: 0 3px 3px 0px;
 }
 
 .jq-number__spin {

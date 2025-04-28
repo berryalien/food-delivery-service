@@ -24,7 +24,7 @@
 
 @import 'page-index/about';
 
-@import 'page-index/restorans';
+@import 'page-index/restaurants';
 
 @import 'parts/card-rest';
 
@@ -59,6 +59,7 @@
 @import 'parts/irs-styler';
 
 @import 'page-products/products';
+
 
 .description {
   padding: 60px 0;
@@ -301,7 +302,7 @@
     margin-right: 30px;
 
     &:checked+.description__form-span {
-      background-image: url('../images/icons/icon-check-mark.svg');
+      background-image: url('../images/icons/icon-check.svg');
       background-repeat: no-repeat;
       background-size: 14px;
       background-position: center center;

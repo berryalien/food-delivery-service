@@ -1,0 +1,136 @@
+<div class="description">
+  <div class="container">
+    <div class="description__inner">
+
+      <ul class="description__tabs">
+        <li class="description__item">
+          <a class="description__link description__link--active" href="#tab1">Описание</a>
+        </li>
+        <li class="description__item">
+          <a class="description__link" href="#tab2">Характеристики</a>
+        </li>
+        <li class="description__item">
+          <a class="description__link" href="#tab3">Отзывы<span>(3)</span></a>
+        </li>
+      </ul>
+
+      <div id="tab1" class="description__content description__content--active">
+        <p>
+          Рубленый бифштекс из натуральной говядины на карамелизованной булочке, с ломтиком сыра «Чеддер», кетчупом,
+          горчицей, луком и маринованными огурчиками.<br><br>
+          Аллергены: Глютен, Молоко, Горчица, Может содержать сою, яйцо, следы кунжута<br><br>
+          Внешний вид товара может отличаться от изображений, представленных на сайте.
+        </p>
+      </div>
+
+      <div id="tab2" class="description__content">
+        <ul class="description__charakter-items">
+          <li class="description__charakter-item">
+            Диаметр:
+            <span class="description__charakter">20 см</span>
+          </li>
+          <li class="description__charakter-item">
+            Вес:
+            <span class="description__charakter">300 гр</span>
+          </li>
+          <li class="description__charakter-item">
+            Калорийность (на 100г):
+            <span class="description__charakter">295 ккал</span>
+          </li>
+          <li class="description__charakter-item">
+            Срок хранения:
+            <span class="description__charakter">до 3 дней</span>
+          </li>
+        </ul>
+      </div>
+
+      <div id="tab3" class="description__content">
+        <h3 class="description__opinions-title">Мнение наших клиентов</h3>
+        <ul class="description__opinions">
+          <li class="description__opinions-item">
+            <div class="description__top">
+              <div class="description__top-inner">
+                <img class="description__client-img" src="images/feedback/feedback.jpg">
+                <div class="description__client">
+                  <span class="description__client-name">Дарья</span>
+                  <time class="description__date">08.03.2025</time>
+                </div>
+              </div>
+              <div class="description__stars" data-rateyo-rating="5"></div>
+            </div>
+            <blockquote class="description__client-text">
+              <p>SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
+                приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на
+                доставку - однозначно рекомендую!</p>
+            </blockquote>
+          </li>
+          <li class="description__opinions-item">
+            <div class="description__top">
+              <div class="description__top-inner">
+                <img class="description__client-img" src="images/feedback/comment-authors.jpg">
+                <div class="description__client">
+                  <span class="description__client-name">Андрей</span>
+                  <time class="description__date">10.06.2024</time>
+                </div>
+              </div>
+              <div class="description__stars" data-rateyo-rating="5"></div>
+            </div>
+            <blockquote class="description__client-text">
+              <p>
+                Доставили быстро. Товар свежий и очень вкусный, буду пробовать еще!
+              </p>
+            </blockquote>
+          </li>
+          <li class="description__opinions-item">
+            <div class="description__top">
+              <div class="description__top-inner">
+                <img class="description__client-img" src="images/feedback/comment-authors.jpg">
+                <div class="description__client">
+                  <span class="description__client-name">Екатерина Белая</span>
+                  <time class="description__date">7.09.2024</time>
+                </div>
+              </div>
+              <div class="description__stars" data-rateyo-rating="4"></div>
+            </div>
+            <blockquote class="description__client-text">
+              <p>
+                этот бургер неплохой чтобы перекусить, когда нет возможности или времени что-нибудь приготовить. Это
+                отличный вариант, чтобы съесть на ходу, но чтобы побаловать себя, я больше предпочту пиццу
+              </p>
+            </blockquote>
+          </li>
+        </ul>
+        <div class="description__form-wrapper">
+          <h3 class="description__form-title">Оставить отзыв</h3>
+          <div class="description__form-rate">
+            <span class="description__form-sub">Ваша оценка*</span>
+            <div class="description__form-stars" data-rateyo-rating="0">
+            </div>
+          </div>
+          <form class="description__form">
+            <div class="description__form-inner">
+              <div class="description__form-left">
+                <label class="description__form-label" for="text-description">Ваш отзыв*</label>
+                <textarea class="description__form-text" id="text-description" name="textarea"
+                  placeholder="Введите текст отзыва" required></textarea>
+              </div>
+              <div class="description__form-right">
+                <label class="description__form-label" for="description-name">Имя</label>
+                <input class="description__form-name" id="description-name" name="name" placeholder="Введите ваше имя">
+                <label class="description__form-label" for="description-email">Email*</label>
+                <input class="description__form-email" id="description-email" type="email" name="email"
+                  placeholder="youremail@mail.com" required>
+              </div>
+            </div>
+            <label class="description__form-label description__checkbox-label" for="save-me">
+              <input class="description__form-check" id="save-me" type="checkbox" name="save-me">
+              <span class="description__form-span"></span>
+              Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+            </label>
+            <input class="description__form-button animation-btn" type="submit" name="button" value="Оставить отзыв">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -21,7 +21,7 @@
     height: 550px;
     background-color: #fff;
     margin-right: 28px;
-    box-shadow: 0px 0px 0px 1px $silver-200;
+    box-shadow: 0 0 0 1px $silver-200;
     border-radius: 5px;
 
     @include mq(tablet-2) {
@@ -264,10 +264,10 @@
 
     &:hover {
       .product__console-btn-style {
-        box-shadow: 0px 0px 0px 1px $gray;
+        box-shadow: 0 0 0 1px $gray;
 
         &::before {
-          box-shadow: 0px 0px 0px 1px $gray;
+          box-shadow: 0 0 0 1px $gray;
         }
       }
     }
